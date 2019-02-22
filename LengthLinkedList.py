@@ -24,6 +24,22 @@ class LinkedList:
       return count
 
 
+    #Recursive Approach
+    
+    def recLength(self, node):
+      if not node:
+        return 0
+      else:
+        return (1 + self.recLength(node.next))
+      
+    # Wrapper around RecLength
+
+    # def lengthList(self):
+    #   return self.recLength(self.head)
+    
+
+
+
 if __name__=='__main__': 
     llist = LinkedList() 
     llist.push(1) 
