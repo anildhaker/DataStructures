@@ -22,7 +22,7 @@ def calculateSpan(price, n, S):
 
 # Traverse left while the next element on left is
 # smaller than price[i]
-    j = i – 1
+    j = i - 1
     while (j>= 0) and (price[i] >= price[j]) :
       S[i] += 1
       j -= 1
@@ -31,7 +31,7 @@ def calculateSpan(price, n, S):
 def printArray(arr, n):
 
   for i in range(n):
-  print(arr[i], end = ” “)
+    print(arr[i],)
 
 # Driver program to test above function
 price = [10, 4, 5, 90, 120, 80]
