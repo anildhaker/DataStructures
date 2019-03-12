@@ -13,7 +13,8 @@ def leftRotatebyOne(arr, n):
 
 def printArray(arr):
   for i in range(len(arr)):
-    print(arr[i],)
+    print(arr[i], end=' ')
+  print()
   
 arr = [1, 2, 3, 4, 5, 6, 7] 
 leftRotate(arr, 2, 7)
