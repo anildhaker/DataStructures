@@ -16,7 +16,8 @@ def printArray(arr):
     print(arr[i], end=' ')
   print()
   
-arr = [1, 2, 3, 4, 5, 6, 7] 
+arr = [1, 2, 3, 4, 5, 6, 7]  #  ===> [3,4,5,6,7,1,2]
 leftRotate(arr, 2, 7)
-
+print()
 printArray(arr)
+print()
