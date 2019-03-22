@@ -17,7 +17,7 @@ class Queue(object):
     if not self.is_empty():
       return self.items[-1].data
 
-  def ___len__(self):
+  def __len__(self):
     return self.size()
 
   def size(self):
@@ -35,7 +35,7 @@ class BinaryTree(object):
     self.root = Node(root)
   
   def level_Order_travelsal(self,start):
-    if not start:
+    if start is None:
       return
     
     queue = Queue()
@@ -54,7 +54,7 @@ class BinaryTree(object):
         queue.enQueue(node.right)
 
     return traversal
-
+  
 tree = BinaryTree(1)
 tree.root.left = Node(2)
 tree.root.right = Node(3)
@@ -63,3 +63,5 @@ tree.root.left.right = Node(5)
 tree.root.right.left = Node(6)
 tree.root.right.right = Node(7)
 tree.root.right.right.right = Node(8)
+
+print(tree.level_Order_travelsal(tree.root))
