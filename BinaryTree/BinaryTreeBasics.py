@@ -45,10 +45,12 @@ class BinaryTree(object):
 
   def post_order_print(self, start, traversal):
     # Left --> Right --> Root
-    traversal = self.post_order_print(start.left, traversal)
-    traversal = self.post_order_print(start.right, traversal)
-    traversal += str(start.data) + " "
-    
+    if start:
+      traversal = self.post_order_print(start.left, traversal)
+      traversal = self.post_order_print(start.right, traversal)
+      traversal += str(start.data) + " "
+    return traversal
+
 
 tree = BinaryTree(1)
 tree.root.left = Node(2)
@@ -60,7 +62,7 @@ tree.root.right.right = Node(7)
 tree.root.right.right.right = Node(8)
 
 
-print(tree.print_tree("inorder"))
+print(tree.print_tree("postorder"))
 
 
 
