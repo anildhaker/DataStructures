@@ -13,7 +13,7 @@ class Queue():
     return self.outStack.pop()
 
 q = Queue()  
-###
+####
 for i in range(1, 11):
   q.enQueue(i)
 
