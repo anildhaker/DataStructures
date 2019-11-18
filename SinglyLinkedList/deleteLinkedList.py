@@ -9,40 +9,38 @@ class LinkedList:
     def __init__(self):
         self.head = None
         
-    def printList(self):
+    def printlList(self):
         temp = self.head
-        while(temp):
-            print(temp.data, end=" ")
-            temp = temp.next
-    
+        while (temp):
+            print(temp.data)
+            temp = temp.next 
+
+    def push(self, new_data): 
+        new_node = Node(new_data) 
+        new_node.next = self.head 
+        self.head = new_node
+        
 
     def delLinkList(self):
-      current = self.head
+      curr = self.head
       
-      while (current):
-        prev = current.next
+      while (curr):
+          temp = curr.next
+          
+          del curr.data
+          
+          curr = temp
+        
+llist = LinkedList() 
+llist.push(7) 
+llist.push(1) 
+llist.push(3) 
+llist.push(2) 
+llist.push(8)
 
-        del (current.data)
-        
-        current = prev
-            
-        
-              
-if __name__=='__main__':
-    
-    llist = LinkedList()
-    
-    llist.head = Node(1)
-    second = Node(2)
-    third = Node(3)
-    
-    llist.head.next = second 
-    second.next = third
-    
-    llist.push(5)
-    llist.append(6)
-    
-    llist.printList()
-    llist.delNodePosition(2)
-    print()
-    llist.printList()
+
+print("before deletion --")
+llist.printlList()
+
+llist.delLinkList()
+print("Link List deleted")
