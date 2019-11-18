@@ -25,11 +25,11 @@ class LinkedList:
         count += 1
         current = current.next
 
-if __name__=='__main__': 
-    llist = LinkedList() 
-    llist.push(1) 
-    llist.push(3) 
-    llist.push(1) 
-    llist.push(2) 
-    llist.push(1)
-    print(llist.nthNode(3)) 
+ 
+llist = LinkedList() 
+llist.push(1) 
+llist.push(3) 
+llist.push(1) 
+llist.push(2) 
+llist.push(1)
+print(llist.nthNode(3)) 
