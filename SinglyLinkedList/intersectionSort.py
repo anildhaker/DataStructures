@@ -16,6 +16,12 @@ class LinkedList:
     new_Node.next = self.head
     self.head = new_Node
 
+  def printlList(self):
+    temp = self.head
+    while (temp):
+      print(temp.data)
+      temp = temp.next
+
   def add(self, new_data):
     temp = self.head
 
@@ -28,11 +34,6 @@ class LinkedList:
 
     temp.next = Node(new_data)
 
-  def printlList(self):
-    temp = self.head
-    while (temp):
-      print(temp.data)
-      temp = temp.next
 
 
 def intersection(list1, list2):
